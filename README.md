@@ -78,7 +78,6 @@ This is a concept file with following syntax for each concept.</p>
 
 You can see the result of runnings on "/reports/html-report/2021-11-24 03.39.43/index.html"
 
-"# BDD-Gauge-Protein-Sample" 
 ## About this template
 
 This is a template to get started with a Gauge project that uses Selenium as the driver to interact with a web browser.
