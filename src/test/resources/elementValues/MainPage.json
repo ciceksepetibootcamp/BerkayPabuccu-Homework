@@ -1,0 +1,77 @@
+[
+  {
+    "key": "orderFieldClosePopUp",
+    "value": "div[class='subheader-close js-subheader-close is-hidden'] a",
+    "type": "css"
+  },
+  {
+    "key": "closePopUp",
+    "value": "[class='close-icon']",
+    "type": "css"
+  },
+  {
+    "key": "popUpFrame",
+    "value": "iframe[class='ab-in-app-message  ab-html-message ab-modal-interactions']",
+    "type": "css"
+  },
+  {
+    "key": "signInButtonHover",
+    "value": "div[class='header__right-col'] ul[class='user-menu__items  ']>li:nth-of-type(2)",
+    "type": "css"
+  },
+  {
+    "key": "signIn",
+    "value": "//span[contains(text(), 'Üye Girişi')]",
+    "type": "xpath"
+  },
+  {
+    "key": "searchBox",
+    "value": "div[id='product-search-0'] input",
+    "type": "css"
+  },
+  {
+    "key": "products",
+    "value": "div[class*='products__item js-category-item-hover'] a",
+    "type": "css"
+  },
+  {
+    "key": "productDetailPagePriceIntegerPart",
+    "value": "//div[@class='product__info__new-price js-price-container ']/div[1]",
+    "type": "xpath"
+  },
+  {
+    "key": "productDetailPagePriceDecimalPart",
+    "value": "//div[@class='product__info__new-price js-price-container ']/div[2]",
+    "type": "xpath"
+  },
+  {
+    "key": "addToWishList",
+    "value": "div[class='product__action-col--right'] a",
+    "type": "css"
+  },
+  {
+    "key": "userIDEmail",
+    "value": "input[id='EmailLogin']",
+    "type": "css"
+  },
+  {
+    "key": "userPassword",
+    "value": "input[id='Password']",
+    "type": "css"
+  },
+  {
+    "key": "loginButton",
+    "value": "button[class*='js-login-button']",
+    "type": "css"
+  },
+  {
+    "key": "addToCart",
+    "value": "div[class='product__action-col'] button",
+    "type": "css"
+  },
+  {
+    "key": "productCartPrice",
+    "value": "span[class='cart__item-price--new']",
+    "type": "css"
+  }
+]

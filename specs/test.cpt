@@ -1,0 +1,34 @@
+Created by berka on 15.10.2021
+
+This is a concept file with following syntax for each concept.
+
+# User navigates to https://ciceksepeti.com
+* Navigate to home page
+* Check if title contains text "ÇiçekSepeti - Online Çiçek & Hediye Sitesi"
+
+# Close Popups
+* Switch to frame given "popUpFrame"
+* Click to element "closePopUp"
+* Switch to default frame
+* Click to element "orderFieldClosePopUp"
+
+# Sign In
+* Hover to element "signInButtonHover"
+* Click to element "signIn"
+* "userIDEmail" li elemente "senem2142@outlook.com" değerini yazdır
+* "userPassword" li elemente "Test1234" değerini yazdır
+* Click to element "loginButton"
+* Set captcha code
+
+# Search Product
+* "searchBox" li elemente "logitech mouse" değerini yazdır ve enter'a bas
+* "products" menu listesinden rasgele seç
+* "productDetailPagePriceIntegerPart" li elementi bul ve değerini "detailPagePriceIntegerPart" olarak sakla
+* "productDetailPagePriceDecimalPart" li elementi bul ve değerini "detailPagePriceDecimalPart" olarak sakla
+
+# Add Product to Wishlist
+* Click to element "addToWishList"
+* Click to element "addToCart"
+
+# Compare Product Detail Page Price and Cart Price
+* "productCartPrice" li elementi bul ve değerini "detailPagePriceIntegerPart" ve "detailPagePriceDecimalPart" saklanan değer ile karşılaştır

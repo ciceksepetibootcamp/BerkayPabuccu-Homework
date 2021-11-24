@@ -1,0 +1,1 @@
+var index = {"Tags":{},"Specs":{"Getir Sample Shop -Table driven execution":["specs/example.html"]}};
