@@ -1,0 +1,858 @@
+{
+	"info": {
+		"_postman_id": "e5665d4f-b416-427d-8b7c-07a48a2b8a71",
+		"name": "Trello API Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Board",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const boardName = \"CS Sprint\" + parseInt(Math.random() * 1000)\r",
+							"pm.environment.set(\"board_name\", boardName)"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Board Created Succesfully\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"let response = pm.response.json();\r",
+							"console.log(response.name)\r",
+							"pm.environment.set(\"board_id2\",response.id)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/1/boards/?key={{trelloauthKey}}&token={{trelloauthToken}}&name={{board_name}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"1",
+						"boards",
+						""
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{trelloauthKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trelloauthToken}}"
+						},
+						{
+							"key": "name",
+							"value": "{{board_name}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Board Update",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Board Update Successfully\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/1/boards/{{board_id2}}?key={{trelloauthKey}}&token={{trelloauthToken}}&name=board1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"1",
+						"boards",
+						"{{board_id2}}"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{trelloauthKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trelloauthToken}}"
+						},
+						{
+							"key": "name",
+							"value": "board1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Board",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Getting Board Successfully\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"var jsonData = pm.response.json();\r",
+							"\r",
+							"\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 555ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(555);\r",
+							"});\r",
+							"pm.test(jsonData, function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"\r",
+							"\r",
+							"console.log(jsonData);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/1/boards/{{board_id2}}?key={{trelloauthKey}}&token={{trelloauthToken}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"1",
+						"boards",
+						"{{board_id2}}"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{trelloauthKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trelloauthToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Board",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/1/boards/:id?key={{trelloauthKey}}&token={{trelloauthToken}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"1",
+						"boards",
+						":id"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{trelloauthKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trelloauthToken}}"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{board_id2}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"List Created Successfully\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"let response = pm.response.json();\r",
+							"console.log(response.id)\r",
+							"pm.environment.set(\"list_id\",response.id)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/1/lists?key={{trelloauthKey}}&token={{trelloauthToken}}&name=list&idBoard={{board_id2}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"1",
+						"lists"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{trelloauthKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trelloauthToken}}"
+						},
+						{
+							"key": "name",
+							"value": "list"
+						},
+						{
+							"key": "idBoard",
+							"value": "{{board_id2}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Update",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"List Name Updated Successfully\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/1/lists/:id?key={{trelloauthKey}}&token={{trelloauthToken}}&name=new list",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"1",
+						"lists",
+						":id"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{trelloauthKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trelloauthToken}}"
+						},
+						{
+							"key": "name",
+							"value": "new list"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{list_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"List Received Successfully\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/1/lists/:id?key={{trelloauthKey}}&token={{trelloauthToken}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"1",
+						"lists",
+						":id"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{trelloauthKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trelloauthToken}}"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{list_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Card to Board",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Card Created Successfully\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"let response = pm.response.json();\r",
+							"console.log(response.id)\r",
+							"pm.environment.set(\"card_id\",response.id)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/1/cards?key={{trelloauthKey}}&token={{trelloauthToken}}&idList={{list_id}}&name=card1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"1",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{trelloauthKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trelloauthToken}}"
+						},
+						{
+							"key": "idList",
+							"value": "{{list_id}}"
+						},
+						{
+							"key": "name",
+							"value": "card1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Card",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Card Updated Successfully\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/1/cards/:id?key={{trelloauthKey}}&token={{trelloauthToken}}&name=new card",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"1",
+						"cards",
+						":id"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{trelloauthKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trelloauthToken}}"
+						},
+						{
+							"key": "name",
+							"value": "new card"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{card_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Card",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Card Data Received Successfully\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"let response = pm.response.json();\r",
+							"console.log(response.id)\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/1/cards/:id?key={{trelloauthKey}}&token={{trelloauthToken}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"1",
+						"cards",
+						":id"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{trelloauthKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trelloauthToken}}"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{card_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Lists From Board",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Verify To Do Lists\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData[0].name).to.eql(\"Yapılacaklar\");\r",
+							"});\r",
+							"pm.test(\"Verify To Do Lists\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData[1].name).to.eql(\"Yapılıyor\");\r",
+							"});\r",
+							"pm.test(\"Verify To Do Lists\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData[2].name).to.eql(\"Tamamlandı\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/1/boards/{{board_id2}}/lists?key={{trelloauthKey}}&token={{trelloauthToken}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"1",
+						"boards",
+						"{{board_id2}}",
+						"lists"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{trelloauthKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trelloauthToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Card List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/1/cards/{{card_id}}/list?key={{trelloauthKey}}&token={{trelloauthToken}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"1",
+						"cards",
+						"{{card_id}}",
+						"list"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{trelloauthKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trelloauthToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Card",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Card Deleted Successfully\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/1/cards/:id?key={{trelloauthKey}}&token={{trelloauthToken}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"1",
+						"cards",
+						":id"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{trelloauthKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trelloauthToken}}"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{card_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create CheckList",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"CheckList Created Successfully\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"let response = pm.response.json();\r",
+							"console.log(response.id)\r",
+							"pm.environment.set(\"checklist_id\",response.id)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/1/checklists?key={{trelloauthKey}}&token={{trelloauthToken}}&idCard={{card_id}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"1",
+						"checklists"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{trelloauthKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trelloauthToken}}"
+						},
+						{
+							"key": "idCard",
+							"value": "{{card_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete CheckList",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Checklist Deleted Successfully\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/1/checklists/:id?key={{trelloauthKey}}&token={{trelloauthToken}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"1",
+						"checklists",
+						":id"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{trelloauthKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trelloauthToken}}"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{checklist_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Label",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Label Created Successfully\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"let response = pm.response.json();\r",
+							"console.log(response.id)\r",
+							"pm.environment.set(\"label_id\",response.id)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/1/labels?key={{trelloauthKey}}&token={{trelloauthToken}}&name=lbl&idBoard={{board_id2}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"1",
+						"labels"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{trelloauthKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trelloauthToken}}"
+						},
+						{
+							"key": "name",
+							"value": "lbl"
+						},
+						{
+							"key": "idBoard",
+							"value": "{{board_id2}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Label",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Label Deleted Successfully\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/1/label/:id?key={{trelloauthKey}}&token={{trelloauthToken}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"1",
+						"label",
+						":id"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{trelloauthKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trelloauthToken}}"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{label_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
