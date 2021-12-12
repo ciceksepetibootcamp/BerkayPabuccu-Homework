@@ -1,0 +1,72 @@
+[
+  {
+    "key": "titleHomePage",
+    "value": "//title",
+    "type": "xpath"
+  },
+  {
+    "key": "liveTodaySection",
+    "value": "[class='main']>section:nth-of-type(1)",
+    "type": "css"
+  },
+  {
+    "key": "happyPeopleSection",
+    "value": "[class='main']>section:nth-of-type(2)",
+    "type": "css"
+  },
+  {
+    "key": "ourTechSection",
+    "value": "[class='main']>section:nth-of-type(3)",
+    "type": "css"
+  },
+  {
+    "key": "whoWeAreSection",
+    "value": "[class='main']>section:nth-of-type(4)",
+    "type": "css"
+  },
+  {
+    "key": "pTalksSection",
+    "value": "[class='main']>section:nth-of-type(5)",
+    "type": "css"
+  },
+  {
+    "key": "sayHeySection",
+    "value": "[class='main']>section:nth-of-type(6)",
+    "type": "css"
+  },
+  {
+    "key": "ourTechTopBar",
+    "value": "[class='Navigation'] a:nth-of-type(1)",
+    "type": "css"
+  },
+  {
+    "key": "whoWeAreTopBar",
+    "value": "[class='Navigation'] a:nth-of-type(2)",
+    "type": "css"
+  },
+  {
+    "key": "pTalksTopBar",
+    "value": "[class='Navigation'] a:nth-of-type(3)",
+    "type": "css"
+  },
+  {
+    "key": "sayHey",
+    "value": "[class='Navigation'] a:nth-of-type(4)",
+    "type": "css"
+  },
+  {
+    "key": "openRolesSubSection",
+    "value": "section[class*='OpenRules_OpenRules']",
+    "type": "css"
+  },
+  {
+    "key": "iOSDeveloper",
+    "value": "//a[contains(text(),'iOS Developer')]",
+    "type": "xpath"
+  },
+  {
+    "key": "softwareDevelopment",
+    "value": "//b[contains(text(),'Software Development')]",
+    "type": "xpath"
+  }
+]
