@@ -3,11 +3,11 @@ Bu çalışmada spotify sitesi kullanılmış olup projeyi çalıştırabilmek i
 
 Test Adımları
 
-Get Artist
-Get Artist Top Tracks
-Create a Playlist
-Add Track to Playlist
-Delete Playlist
-Search For Item
-Get User
-Get User Profile
+* Get Artist
+* Get Artist Top Tracks
+* Create a Playlist
+* Add Track to Playlist
+* Delete Playlist
+* Search For Item
+* Get User
+* Get User Profile
