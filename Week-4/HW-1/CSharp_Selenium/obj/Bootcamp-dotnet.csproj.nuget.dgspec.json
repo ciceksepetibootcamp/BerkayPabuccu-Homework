@@ -1,0 +1,88 @@
+{
+  "format": 1,
+  "restore": {
+    "c:\\Users\\testinium\\Desktop\\test\\CSharp_Selenium\\CSharp_Selenium\\Bootcamp-dotnet.csproj": {}
+  },
+  "projects": {
+    "c:\\Users\\testinium\\Desktop\\test\\CSharp_Selenium\\CSharp_Selenium\\Bootcamp-dotnet.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\testinium\\Desktop\\test\\CSharp_Selenium\\CSharp_Selenium\\Bootcamp-dotnet.csproj",
+        "projectName": "Bootcamp-dotnet",
+        "projectPath": "c:\\Users\\testinium\\Desktop\\test\\CSharp_Selenium\\CSharp_Selenium\\Bootcamp-dotnet.csproj",
+        "packagesPath": "C:\\Users\\testinium\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\testinium\\Desktop\\test\\CSharp_Selenium\\CSharp_Selenium\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\testinium\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "DotNetSeleniumExtras.PageObjects.Core": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.4.0, )"
+            },
+            "Microsoft.TestPlatform.TestHost": {
+              "target": "Package",
+              "version": "[17.0.1-release-20211109-01, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.15.1, )"
+            },
+            "Selenium.WebDriver": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "SeleniumExtras.WaitHelpers": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
+            "nunit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\3.1.416\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

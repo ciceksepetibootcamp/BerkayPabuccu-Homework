@@ -13,3 +13,7 @@ buildNumber.properties
 .gauge/
 .idea/
 manifest.json
+.vscode/
+Bootcamp-dotnet.csproj
+bin/
+.pytest_cache/
