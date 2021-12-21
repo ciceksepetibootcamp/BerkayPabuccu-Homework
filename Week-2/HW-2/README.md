@@ -1,3 +1,7 @@
+[![-----------------------------------------------------](
+https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)](https://github.com/berkaypab?tab=repositories)
+<br/>
+
 Postman 
 Bu çalışmada https://api.trello.com adresi kullanılmış olup 15 adet API isteği postman kullanılarak atılmış ve automated testler yapılmıştır. Kullanılan senaryo adımları aşağıdaki gibidir.
 
@@ -27,3 +31,7 @@ Aşağıda verieln test çeşitleri senaryodaki çeşitli adımlarda kullanılm�
 * Response time verilen değerden küçük mü
 * Response body Json verilen değeri içeriyor mu
 * Response body verilen texti içeriyor mu
+
+[![-----------------------------------------------------](
+https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)](https://github.com/berkaypab?tab=repositories)
+<br/>
