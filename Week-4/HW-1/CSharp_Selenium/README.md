@@ -15,7 +15,7 @@ Used Technologies
 Trendyol Sample Test Steps<br/>
 ------------------------------</p>
 <ul>
-<li>User navigates to <a href="https://trendyol.com" rel="nofollow">https://ciceksepeti.com</a></li>
+<li>User navigates to <a href="https://trendyol.com" rel="nofollow">https://trendyol.com</a></li>
 <li>Close Popups</li>
 <li>Sign In</li>
 <li>Search Product</li>
