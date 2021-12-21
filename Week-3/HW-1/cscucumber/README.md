@@ -1,3 +1,7 @@
+[![-----------------------------------------------------](
+https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)](https://github.com/berkaypab?tab=repositories)
+<br/>
+
 1) Used Selenium in project.
 2) Written with Behaviour Driven Development approach.
 3) Used Page Object Pattern And OOP approach.
@@ -16,3 +20,7 @@ Test Steps
 is present.
 6) User verify that iOS Developer position is under the Software Development section.
 7) User clicks to iOS Developer position and verify the new tab is opened.
+
+[![-----------------------------------------------------](
+https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)](https://github.com/berkaypab?tab=repositories)
+<br/>
