@@ -2,7 +2,6 @@
 https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)](https://github.com/berkaypab?tab=repositories)
 <br/>
 
-
 # Berkay Pabuççu
 
 Homeworks for Çiçek Sepeti Test Automation Bootcamp
@@ -32,6 +31,12 @@ Homeworks for Çiçek Sepeti Test Automation Bootcamp
   - 2. Homework
       - Python Test Scenarios
 
+- [x] 5. Hafta :
+  - 1. Homework
+      - Appium Mobile Automation
+
+
 [![-----------------------------------------------------](
 https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)](https://github.com/berkaypab?tab=repositories)
 <br/>
+
