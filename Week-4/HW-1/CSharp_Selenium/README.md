@@ -1,4 +1,4 @@
-Created by berkay on 21.12.2021
+
 [![-----------------------------------------------------](
 https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)](https://github.com/berkaypab?tab=repositories)
 <br/>
