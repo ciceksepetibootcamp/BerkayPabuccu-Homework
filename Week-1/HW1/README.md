@@ -1,3 +1,7 @@
+[![-----------------------------------------------------](
+https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)](https://github.com/berkaypab?tab=repositories)
+<br/>
+
 <h1>Test Spec File </h1></br>
 
 
@@ -111,3 +115,7 @@ _We recommend considering modelling your tests using the [Page Object](https://g
 ```
 mvn test
 ```
+
+[![-----------------------------------------------------](
+https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)](https://github.com/berkaypab?tab=repositories)
+<br/>
