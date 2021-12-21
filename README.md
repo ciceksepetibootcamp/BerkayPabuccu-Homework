@@ -1,3 +1,8 @@
+[![-----------------------------------------------------](
+https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)](https://github.com/berkaypab?tab=repositories)
+<br/>
+
+
 # Berkay Pabuççu
 
 Homeworks for Çiçek Sepeti Test Automation Bootcamp
@@ -26,3 +31,7 @@ Homeworks for Çiçek Sepeti Test Automation Bootcamp
       - .NET Test Scenarios
   - 2. Homework
       - Python Test Scenarios
+
+[![-----------------------------------------------------](
+https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)](https://github.com/berkaypab?tab=repositories)
+<br/>
