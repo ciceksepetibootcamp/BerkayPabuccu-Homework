@@ -8,6 +8,8 @@ Used Technologies
 * Appium
 * Junit
 * BDD Gauge
+* Log4J
+* Maven
 
 GetirSample - Case 1
 --------------------------------
