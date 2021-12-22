@@ -1,0 +1,97 @@
+[
+  {
+    "key": "GetirSample_Header",
+    "androidValue": "//android.widget.ImageButton[@content-desc='Open navigation drawer']/following-sibling::android.widget.TextView",
+    "androidType": "xpath"
+  },
+  {
+    "key": "Tab_Snacks",
+    "androidValue": "//android.support.v7.app.ActionBar.Tab[@content-desc='Snacks']",
+    "androidType": "xpath"
+  },
+  {
+    "key": "Home_Skip_Button",
+    "androidValue": "com.allandroidprojects.getirsample:id/btn_skip",
+    "androidType": "id"
+  },
+  {
+    "key": "Tabs_Area",
+    "androidValue": "com.allandroidprojects.getirsample:id/tabs",
+    "androidType": "id"
+  },
+  {
+    "key": "Tab_Baby_Care",
+    "androidValue": "//android.support.v7.app.ActionBar.Tab[@content-desc='Baby Care']",
+    "androidType": "xpath"
+  },
+  {
+    "key": "Products",
+    "androidValue": "com.allandroidprojects.getirsample:id/cardview",
+    "androidType": "id"
+  },
+  {
+    "key": "Add_To_Cart",
+    "androidValue": "com.allandroidprojects.getirsample:id/text_action_bottom1",
+    "androidType": "id"
+  },
+  {
+    "key": "Heart_Icon",
+    "androidValue": "com.allandroidprojects.getirsample:id/ic_wishlist",
+    "androidType": "id"
+  },
+  {
+    "key": "Price_Label",
+    "androidValue": "//android.widget.ImageView[@resource-id='com.allandroidprojects.getirsample:id/image1']/following-sibling::android.widget.LinearLayout[1]/android.widget.TextView[2]",
+    "androidType": "xpath"
+  },
+  {
+    "key": "Hamburger_Menu",
+    "androidValue": "//android.widget.ImageButton[@content-desc='Open navigation drawer']",
+    "androidType": "xpath"
+  },
+  {
+    "key": "My_Cart",
+    "androidValue": "//android.support.v7.widget.LinearLayoutCompat[8]/android.widget.CheckedTextView",
+    "androidType": "xpath"
+  },
+  {
+    "key": "My_Wishlist",
+    "androidValue": "//android.support.v7.widget.LinearLayoutCompat[9]/android.widget.CheckedTextView",
+    "androidType": "xpath"
+  },
+  {
+    "key": "Cart_Price1",
+    "androidValue": "//android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.TextView[3]",
+    "androidType": "xpath"
+  },
+  {
+    "key": "Cart_Price2",
+    "androidValue": "//android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.TextView[3]",
+    "androidType": "xpath"
+  },
+  {
+    "key": "Cart_Products",
+    "androidValue": "//*[@resource-id='com.allandroidprojects.getirsample:id/recyclerview']",
+    "androidType": "xpath"
+  },
+  {
+    "key": "Wishlist_Products",
+    "androidValue": "//android.support.v7.widget.RecyclerView/android.widget.LinearLayout",
+    "androidType": "xpath"
+  },
+  {
+    "key": "Remove_Button_Cart_Page",
+    "androidValue": "com.allandroidprojects.getirsample:id/layout_action1",
+    "androidType": "id"
+  },
+  {
+    "key": "Tabs_Category",
+    "androidValue": "//android.widget.LinearLayout/android.support.v7.app.ActionBar.Tab",
+    "androidType": "xpath"
+  },
+  {
+    "key": "Remove_Button_Wishlist_Page",
+    "androidValue": "com.allandroidprojects.getirsample:id/ic_wishlist",
+    "androidType": "id"
+  }
+]

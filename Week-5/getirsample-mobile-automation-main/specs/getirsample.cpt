@@ -1,0 +1,69 @@
+
+# Open GetirSample App
+* Wait "5" seconds
+# Pass Onboarding Screen
+* Click element by "Home_Skip_Button"
+# Check for home page exist
+* Check if "GetirSample_Header" element enable
+# Change category to 'Baby Care'
+* In slider "Tabs_Area" slide from Xcoordinate : "639" to Xcoordinate : "283"
+* Click element by "Tab_Baby_Care"
+# Choose a random product in 'Baby Care' category
+* Choose random in "Products"
+* Find element by "Price_Label" and save text "price1"
+# Add to cart choosen Baby Care product and navigate to last page
+* Click element by "Add_To_Cart"
+* Navigate back
+# Change category to 'Snacks'
+* In slider "Tabs_Area" slide from Xcoordinate : "283" to Xcoordinate : "639"
+* Click element by "Tab_Snacks"
+# Choose a random product in 'Snacks' category
+* Choose random in "Products"
+* Find element by "Price_Label" and save text "price2"
+# Add to cart choosen Snacks product and navigate to last page
+* Click element by "Add_To_Cart"
+* Navigate back
+# Go to cart, verify prices
+* Click element by "Hamburger_Menu"
+* Click element by "My_Cart"
+* Find element by "Cart_Price1" and compare saved key "price1"
+* Find element by "Cart_Price2" and compare saved key "price2"
+# Delete products from cart and checks if any element exist
+* Find by "Remove_Button_Cart_Page" and click all of them
+* Check if element "Cart_Products" not exists
+
+
+
+
+
+# Get the number of categories
+! Side Bar Scenario for print number of Caategory   !--- when use this scenario add Navigate Back after Choose random product in slider tab
+
+ Click element by "Hamburger_Menu"
+ Find element text equals "Snacks"
+ Find element text equals "Electronics"
+ Find element text equals "Water"
+ Find element text equals "Home Care"
+ Find element text equals "Baby Care"
+ Find element text equals "Fruits & Veg"
+ Print category number to console
+
+
+ ! Slider Scenario for print number of Caategory
+* "Tabs_Category" get the number of the categories
+* In slider "Tabs_Area" slide from Xcoordinate : "700" to Xcoordinate : "280"
+* "Tabs_Category" get the number of the categories
+* Print list values
+# Choose a random product in slider tab
+* Choose random in "Tabs_Category"
+# Add three random products to wishlist
+* Random swipe
+* In "Heart_Icon" list randomly select different "3" items
+# Go to mywishlist, check items
+* Click element by "Hamburger_Menu"
+* Click element by "My_Wishlist"
+# Delete products from wishlist and checks if any element exist
+* Find by "Remove_Button_Wishlist_Page" and click all of them
+* Check if element "Wishlist_Products" not exists
+
+
